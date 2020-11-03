@@ -6,17 +6,17 @@ final class CodeProperties
 {
     private CodeValue $codeValue;
     private CodeHash $codeHash;
-    private TTL $ttl;
+    private TokenTTL $ttl;
     private int $attempts;
 
     /**
      * CodeProperties constructor.
      * @param CodeValue $codeValue
      * @param CodeHash $codeHash
-     * @param TTL $ttl
+     * @param TokenTTL $ttl
      * @param int $attempts
      */
-    public function __construct(CodeValue $codeValue, CodeHash $codeHash, TTL $ttl, int $attempts)
+    public function __construct(CodeValue $codeValue, CodeHash $codeHash, TokenTTL $ttl, int $attempts)
     {
         $this->codeValue = $codeValue;
         $this->codeHash = $codeHash;
@@ -41,9 +41,9 @@ final class CodeProperties
     }
 
     /**
-     * @return TTL
+     * @return TokenTTL
      */
-    public function getTtl(): TTL
+    public function getTtl(): TokenTTL
     {
         return $this->ttl;
     }
