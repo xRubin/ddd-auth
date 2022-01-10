@@ -15,7 +15,7 @@ final class Phone extends AbstractDomainValue
      */
     public function __construct(string $value)
     {
-        Assert::regex($value, '/^\+\d{11,15}$/is', 'INVALID_PHONE_NUMBER');
+        Assert::regex($value, '/^\+\d{10,15}$/is', 'INVALID_PHONE_NUMBER');
 
         $this->value = $value;
     }
